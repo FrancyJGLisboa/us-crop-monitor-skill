@@ -81,9 +81,15 @@ echo $NASS_API_KEY
 
 ### 3. Install Skill
 
+**Direct from GitHub (Recommended):**
 ```bash
-cd /path/to/skills
-/plugin marketplace add ./us-crop-monitor
+/plugin marketplace add github:FrancyJGLisboa/us-crop-monitor-skill
+```
+
+**Or install locally:**
+```bash
+git clone https://github.com/FrancyJGLisboa/us-crop-monitor-skill.git
+/plugin marketplace add ./us-crop-monitor-skill
 ```
 
 Expected output:

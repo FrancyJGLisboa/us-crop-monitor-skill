@@ -1,6 +1,6 @@
 # Installation Guide - US Crop Monitor Skill
 
-## Quick Installation (3 minutes)
+## Quick Installation (2 minutes)
 
 ### Step 1: Configure API Key (one-time only)
 ```bash
@@ -9,28 +9,25 @@ echo 'export NASS_API_KEY="5D441C94-9939-32CA-951F-726FC3EEF69A"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-### Step 2: Install the Skill in Claude Code
+### Step 2: Install the Skill
 
-#### Option A: Install from GitHub (Recommended)
+#### Option A: Direct from GitHub (Recommended) ⭐
 ```bash
-# Clone the repository
-git clone https://github.com/FrancyJGLisboa/us-crop-monitor-skill.git
-
-# Navigate to Claude Code skills directory (or your preferred location)
-cd /path/to/your/skills/directory
-mv /path/to/us-crop-monitor-skill ./us-crop-monitor
-
-# Install in Claude Code
-/plugin marketplace add ./us-crop-monitor
-```
-
-#### Option B: Install from local directory
-```bash
-# If you already have the skill directory
-/plugin marketplace add /path/to/us-crop-monitor
+/plugin marketplace add github:FrancyJGLisboa/us-crop-monitor-skill
 ```
 
 **Expected output**: `Successfully added marketplace: us-crop-monitor`
+
+✅ **That's it!** The skill is installed and ready to use.
+
+#### Option B: Install from local clone
+```bash
+# Clone the repository first
+git clone https://github.com/FrancyJGLisboa/us-crop-monitor-skill.git
+
+# Install from local directory
+/plugin marketplace add ./us-crop-monitor-skill
+```
 
 ### Step 3: Test
 Ask Claude:
@@ -60,18 +57,32 @@ Ask Claude:
 
 ### Installation Steps
 
-#### 1. Get the Skill
+#### 1. Install the Skill
 
-**From GitHub:**
+**Method A: Direct from GitHub (Easiest)**
 ```bash
-git clone https://github.com/FrancyJGLisboa/us-crop-monitor-skill.git
-cd us-crop-monitor-skill
+/plugin marketplace add github:FrancyJGLisboa/us-crop-monitor-skill
 ```
 
-**From ZIP:**
+Done! The skill will be automatically cloned and installed.
+
+**Method B: From local clone (for development)**
 ```bash
-unzip us-crop-monitor.zip
-cd us-crop-monitor
+# Clone the repository
+git clone https://github.com/FrancyJGLisboa/us-crop-monitor-skill.git
+
+# Install from directory
+/plugin marketplace add ./us-crop-monitor-skill
+```
+
+**Method C: From ZIP**
+```bash
+# Download and extract ZIP
+unzip us-crop-monitor-skill.zip
+cd us-crop-monitor-skill
+
+# Install
+/plugin marketplace add $(pwd)
 ```
 
 #### 2. Configure API Key
@@ -110,22 +121,7 @@ echo $NASS_API_KEY
 $env:NASS_API_KEY
 ```
 
-#### 3. Install Skill in Claude Code
-
-```bash
-# Navigate to the skill directory
-cd /path/to/us-crop-monitor
-
-# Install
-/plugin marketplace add $(pwd)
-```
-
-Or specify full path:
-```bash
-/plugin marketplace add /full/path/to/us-crop-monitor
-```
-
-#### 4. Verify Installation
+#### 3. Verify Installation
 
 **Check if installed:**
 ```bash
@@ -149,29 +145,28 @@ Ask Claude any of these questions:
 
 ## Updating the Skill
 
-### Method 1: Update in Place (if installed as symlink)
+### Method 1: Auto-Update (if installed from GitHub)
 
 ```bash
-cd /path/to/us-crop-monitor
+# Remove current version
+/plugin marketplace remove us-crop-monitor
+
+# Reinstall latest version from GitHub
+/plugin marketplace add github:FrancyJGLisboa/us-crop-monitor-skill
+```
+
+**Or** wait for Claude Code to auto-update (if this feature is enabled).
+
+### Method 2: Manual Update (if installed locally)
+
+```bash
+cd /path/to/us-crop-monitor-skill
 
 # Pull latest changes
 git pull origin main
 
-# Optional: Restart Claude Code
-# The skill will automatically use the new version
-```
-
-### Method 2: Reinstall
-
-```bash
-# Remove old version
-/plugin marketplace remove us-crop-monitor
-
-# Get new version
-cd /path/to/us-crop-monitor
-git pull origin main
-
 # Reinstall
+/plugin marketplace remove us-crop-monitor
 /plugin marketplace add $(pwd)
 ```
 
