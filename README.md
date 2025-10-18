@@ -101,6 +101,14 @@ Ask Claude:
 
 If the skill responds with NASS data, installation successful!
 
+## 🎬 Demo
+
+See the skill in action:
+
+![US Crop Monitor Demo](assets/demo.gif)
+
+*Natural language queries → Real-time USDA agricultural data analysis*
+
 ## Quick Examples
 
 Try these queries (no year needed - auto-detects 2025!):
