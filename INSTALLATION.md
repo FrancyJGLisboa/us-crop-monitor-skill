@@ -4,10 +4,12 @@
 
 ### Step 1: Configure API Key (one-time only)
 ```bash
-export NASS_API_KEY="5D441C94-9939-32CA-951F-726FC3EEF69A"
-echo 'export NASS_API_KEY="5D441C94-9939-32CA-951F-726FC3EEF69A"' >> ~/.zshrc
+export NASS_API_KEY="YOUR_KEY_HERE"
+echo 'export NASS_API_KEY="YOUR_KEY_HERE"' >> ~/.zshrc
 source ~/.zshrc
 ```
+
+**Important**: Replace `YOUR_KEY_HERE` with your actual API key from https://quickstats.nass.usda.gov/api/
 
 ### Step 2: Install the Skill
 
@@ -232,10 +234,12 @@ Try each type of query to ensure all features work:
 echo $NASS_API_KEY
 
 # If empty, configure again
-export NASS_API_KEY="5D441C94-9939-32CA-951F-726FC3EEF69A"
-echo 'export NASS_API_KEY="5D441C94-9939-32CA-951F-726FC3EEF69A"' >> ~/.zshrc
+export NASS_API_KEY="YOUR_KEY_HERE"
+echo 'export NASS_API_KEY="YOUR_KEY_HERE"' >> ~/.zshrc
 source ~/.zshrc
 ```
+
+Replace `YOUR_KEY_HERE` with your actual API key from https://quickstats.nass.usda.gov/api/
 
 ### Problem: "Skill doesn't appear in /plugin list"
 

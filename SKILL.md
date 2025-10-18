@@ -1581,11 +1581,13 @@ If the skill responds with data, installation successful!
 echo $NASS_API_KEY
 
 # If empty, add to ~/.zshrc:
-export NASS_API_KEY="5D441C94-9939-32CA-951F-726FC3EEF69A"
+export NASS_API_KEY="YOUR_KEY_HERE"
 
 # Reload
 source ~/.zshrc
 ```
+
+Replace `YOUR_KEY_HERE` with your actual API key from https://quickstats.nass.usda.gov/api/
 
 ### Problem: "No data found"
 

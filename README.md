@@ -68,10 +68,7 @@ echo 'export NASS_API_KEY="YOUR_KEY_HERE"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Or use the provided key:
-```bash
-export NASS_API_KEY='5D441C94-9939-32CA-951F-726FC3EEF69A'
-```
+**Note**: Replace `YOUR_KEY_HERE` with your actual API key from USDA NASS.
 
 Verify:
 ```bash
@@ -238,18 +235,18 @@ Official USDA NASS QuickStats API:
 ### Example Output
 
 ```
-📊 Validações: ✅ 15 | ⚠️ 2 | ❌ 0 | 🚫 0
+📊 Validations: ✅ 15 | ⚠️ 2 | ❌ 0 | 🚫 0
 
-ℹ️  INFORMAÇÕES:
-  ✅ Dados são do ano atual (2025)
-  ✅ Fonte: API do USDA
-  ✅ Publicado pelo USDA há 7 dias
-  ✅ Todas 5 categorias de condição presentes
-  ✅ Consistência OK: Soma = 100%
+ℹ️  INFORMATION:
+  ✅ Data is from current year (2025)
+  ✅ Source: USDA API
+  ✅ Published by USDA 7 days ago
+  ✅ All 5 condition categories present
+  ✅ Consistency OK: Sum = 100%
 
-⚠️  AVISOS:
-  ⚠️ Montana: Valor atípico (23%) - 3.1 desvios padrão da média
-  ⚠️ Kansas com condições abaixo da média histórica
+⚠️  WARNINGS:
+  ⚠️ Montana: Outlier (23%) - 3.1 standard deviations from mean
+  ⚠️ Kansas with conditions below historical average
 ```
 
 ### Documentation
