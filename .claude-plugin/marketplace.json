@@ -1,0 +1,21 @@
+{
+  "name": "us-crop-monitor",
+  "owner": {
+    "name": "Agent Creator",
+    "email": "noreply@example.com"
+  },
+  "metadata": {
+    "description": "US Crop monitoring agent for daily tracking of corn, soybeans, and wheat conditions via NASS API",
+    "version": "1.0.0",
+    "created": "2025-10-17"
+  },
+  "plugins": [
+    {
+      "name": "us-crop-monitor-plugin",
+      "description": "This skill should be used when the user asks about agricultural crop conditions in the United States, especially soybeans, corn, and wheat. Automatically activates for queries about crop conditions, crop progress, harvest monitoring, current crop conditions, weekly or annual comparisons, producer state rankings, crop trend analyses, USDA NASS data, and crop progress reports using Python with NASS API.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./"]
+    }
+  ]
+}

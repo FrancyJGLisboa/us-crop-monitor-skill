@@ -1,0 +1,72 @@
+{
+  "temporal": {
+    "max_age_warning_days": 30,
+    "max_age_error_days": 90,
+    "max_age_critical_years": 2,
+    "crop_seasons": {
+      "CORN": {
+        "start_week": 18,
+        "end_week": 44,
+        "description": "Maio a Outubro"
+      },
+      "SOYBEANS": {
+        "start_week": 18,
+        "end_week": 44,
+        "description": "Maio a Outubro"
+      },
+      "WHEAT": {
+        "start_week": 14,
+        "end_week": 28,
+        "description": "Abril a Julho (Winter Wheat)"
+      },
+      "WHEAT, WINTER": {
+        "start_week": 14,
+        "end_week": 28,
+        "description": "Abril a Julho"
+      },
+      "WHEAT, SPRING": {
+        "start_week": 22,
+        "end_week": 36,
+        "description": "Junho a Setembro"
+      }
+    }
+  },
+  "anomaly": {
+    "max_week_change_warning": 20,
+    "max_week_change_critical": 50,
+    "sigma_threshold": 3.0,
+    "max_yoy_change_warning": 30,
+    "extreme_value_threshold": 99.9
+  },
+  "completeness": {
+    "require_all_categories": true,
+    "required_categories": [
+      "EXCELLENT",
+      "GOOD",
+      "FAIR",
+      "POOR",
+      "VERY POOR"
+    ],
+    "major_producer_threshold_pct": 5.0,
+    "percentage_sum_tolerance": 2.0
+  },
+  "display": {
+    "show_info": true,
+    "show_warnings": true,
+    "show_validation_summary": true,
+    "verbose_mode": false,
+    "max_inline_alerts": 3
+  },
+  "blocking": {
+    "interactive": true,
+    "block_on_critical": true,
+    "block_on_error": false,
+    "allow_override": true
+  },
+  "metadata": {
+    "version": "2.0.0",
+    "track_fetch_time": true,
+    "track_cache_hits": true,
+    "track_publication_date": true
+  }
+}

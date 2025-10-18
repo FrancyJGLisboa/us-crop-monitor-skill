@@ -1,0 +1,59 @@
+{
+  "api": {
+    "base_url": "https://quickstats.nass.usda.gov/api",
+    "endpoints": {
+      "get_data": "api_GET",
+      "get_param_values": "get_param_values",
+      "get_counts": "get_counts"
+    },
+    "rate_limit": {
+      "max_requests": 15,
+      "time_window_seconds": 60
+    },
+    "timeout_seconds": 30,
+    "max_retries": 3
+  },
+  "cache": {
+    "enabled": true,
+    "directory": "data/cache",
+    "ttl": {
+      "historical_seconds": null,
+      "recent_seconds": 604800,
+      "metadata_seconds": 2592000
+    },
+    "cleanup_on_startup": false
+  },
+  "supported_commodities": [
+    "CORN",
+    "SOYBEANS",
+    "WHEAT",
+    "WHEAT, WINTER",
+    "WHEAT, SPRING"
+  ],
+  "condition_categories": [
+    "EXCELLENT",
+    "GOOD",
+    "FAIR",
+    "POOR",
+    "VERY POOR"
+  ],
+  "analysis": {
+    "validation": {
+      "percentage_sum_tolerance": 2.0,
+      "outlier_threshold_std_dev": 3.0,
+      "significant_change_threshold": 5.0
+    },
+    "thresholds": {
+      "excellent_conditions": 70,
+      "good_conditions": 60,
+      "fair_conditions": 50,
+      "poor_conditions": 40
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "data/logs/crop_monitor.log"
+  },
+  "version": "1.0.0"
+}

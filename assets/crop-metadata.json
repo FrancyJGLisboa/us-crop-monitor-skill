@@ -1,0 +1,172 @@
+{
+  "crops": {
+    "CORN": {
+      "full_name": "Corn",
+      "aliases": ["CORN, GRAIN", "MAIZE"],
+      "growing_season": {
+        "start_week": 18,
+        "end_week": 42,
+        "months": "May-October"
+      },
+      "major_producing_states": {
+        "IOWA": 16.0,
+        "ILLINOIS": 15.0,
+        "NEBRASKA": 12.0,
+        "MINNESOTA": 8.0,
+        "INDIANA": 7.0,
+        "SOUTH DAKOTA": 6.0,
+        "KANSAS": 5.0,
+        "OHIO": 4.5,
+        "WISCONSIN": 4.0,
+        "MISSOURI": 3.5,
+        "MICHIGAN": 2.5,
+        "KENTUCKY": 2.0,
+        "NORTH CAROLINA": 1.5,
+        "PENNSYLVANIA": 1.5,
+        "TEXAS": 1.5
+      },
+      "critical_growth_stages": {
+        "planting": "Weeks 18-22 (May)",
+        "emergence": "Weeks 20-24 (May-Jun)",
+        "vegetative": "Weeks 24-28 (Jun-Jul)",
+        "pollination": "Weeks 28-32 (Jul-Aug)",
+        "grain_fill": "Weeks 32-38 (Aug-Sep)",
+        "maturity": "Weeks 38-42 (Sep-Oct)"
+      },
+      "yield_sensitivity": {
+        "most_critical_period": "Weeks 28-32 (Pollination)",
+        "stress_impact": "High - drought/heat during pollination severely reduces yield"
+      }
+    },
+    "SOYBEANS": {
+      "full_name": "Soybeans",
+      "aliases": ["SOYBEAN"],
+      "growing_season": {
+        "start_week": 18,
+        "end_week": 44,
+        "months": "May-November"
+      },
+      "major_producing_states": {
+        "IOWA": 16.0,
+        "ILLINOIS": 15.0,
+        "MINNESOTA": 10.0,
+        "NEBRASKA": 9.0,
+        "INDIANA": 7.0,
+        "MISSOURI": 7.0,
+        "OHIO": 6.0,
+        "SOUTH DAKOTA": 6.0,
+        "NORTH DAKOTA": 5.5,
+        "ARKANSAS": 5.0,
+        "KANSAS": 4.0,
+        "WISCONSIN": 2.5,
+        "MICHIGAN": 2.0,
+        "MISSISSIPPI": 1.5,
+        "KENTUCKY": 1.5,
+        "TENNESSEE": 1.0
+      },
+      "critical_growth_stages": {
+        "planting": "Weeks 18-24 (May-Jun)",
+        "emergence": "Weeks 20-26 (May-Jun)",
+        "vegetative": "Weeks 26-32 (Jun-Aug)",
+        "flowering": "Weeks 30-36 (Jul-Sep)",
+        "pod_fill": "Weeks 34-40 (Aug-Oct)",
+        "maturity": "Weeks 40-44 (Oct-Nov)"
+      },
+      "yield_sensitivity": {
+        "most_critical_period": "Weeks 34-40 (Pod Fill)",
+        "stress_impact": "High - drought during pod fill reduces bean size and yield"
+      }
+    },
+    "WHEAT": {
+      "full_name": "Wheat (All Types)",
+      "aliases": ["WHEAT, WINTER", "WHEAT, SPRING"],
+      "types": {
+        "WINTER": {
+          "planting": "Fall (September-November)",
+          "growing_season": {
+            "start_week": 14,
+            "end_week": 26,
+            "months": "April-June"
+          },
+          "major_states": {
+            "KANSAS": 18.0,
+            "OKLAHOMA": 9.0,
+            "TEXAS": 8.0,
+            "MONTANA": 7.0,
+            "COLORADO": 6.5,
+            "NEBRASKA": 6.0,
+            "SOUTH DAKOTA": 5.0,
+            "WASHINGTON": 4.5,
+            "NORTH DAKOTA": 4.0,
+            "IDAHO": 3.5
+          }
+        },
+        "SPRING": {
+          "planting": "Spring (March-May)",
+          "growing_season": {
+            "start_week": 20,
+            "end_week": 36,
+            "months": "May-September"
+          },
+          "major_states": {
+            "NORTH DAKOTA": 35.0,
+            "MONTANA": 30.0,
+            "MINNESOTA": 15.0,
+            "SOUTH DAKOTA": 10.0,
+            "WASHINGTON": 5.0,
+            "IDAHO": 3.0,
+            "COLORADO": 2.0
+          }
+        }
+      },
+      "critical_growth_stages": {
+        "jointing": "Critical height development",
+        "heading": "Spike emergence",
+        "flowering": "Pollination",
+        "grain_fill": "Kernel development",
+        "maturity": "Ready for harvest"
+      },
+      "yield_sensitivity": {
+        "most_critical_period": "Heading to Grain Fill",
+        "stress_impact": "Moderate-High - frost, heat, or drought reduces kernel count and size"
+      }
+    }
+  },
+  "regional_groupings": {
+    "corn_belt": ["IOWA", "ILLINOIS", "INDIANA", "OHIO"],
+    "northern_plains": ["NORTH DAKOTA", "SOUTH DAKOTA", "MINNESOTA", "NEBRASKA"],
+    "central_plains": ["KANSAS", "MISSOURI", "OKLAHOMA"],
+    "southern_plains": ["TEXAS", "ARKANSAS", "LOUISIANA", "MISSISSIPPI"],
+    "eastern_belt": ["MICHIGAN", "WISCONSIN", "KENTUCKY", "TENNESSEE"],
+    "northwest": ["WASHINGTON", "OREGON", "IDAHO", "MONTANA"]
+  },
+  "interpretation_guidelines": {
+    "good_excellent_thresholds": {
+      "excellent": ">= 70%",
+      "good": "60-69%",
+      "fair": "50-59%",
+      "poor": "< 50%"
+    },
+    "week_over_week_change": {
+      "insignificant": "< 2 points",
+      "moderate": "2-5 points",
+      "significant": "> 5 points",
+      "highly_significant": "> 10 points"
+    },
+    "year_over_year_categories": {
+      "much_better": ">= +10 points",
+      "better": "+5 to +9 points",
+      "similar": "-5 to +5 points",
+      "worse": "-5 to -9 points",
+      "much_worse": "<= -10 points"
+    }
+  },
+  "data_publication_schedule": {
+    "day_of_week": "Monday",
+    "time_et": "16:00",
+    "timezone": "US/Eastern",
+    "notes": "Data for week N published Monday of week N+1 at 4pm ET"
+  },
+  "metadata_version": "1.0.0",
+  "last_updated": "2024-10-17"
+}
